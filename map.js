@@ -1,10 +1,11 @@
-let myMap = L.map('myMap').setView([51.505, -0.09], 13)
+let myMap = L.map('myMap').setView([-22.992697321418394, -43.25322430742979], 15)
 
-L.tileLayer(`https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png`, {
-	maxZoom: 18,
+L.tileLayer(`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=RSwmdC6X8PcbDPXKqiXH`, {
+  maxZoom: 18,
+  attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'	
 }).addTo(myMap);
 
-let marker = L.marker([51.5, -0.09]).addTo(myMap)
+let marker = L.marker([-22.992697321418394, -43.25322430742979]).addTo(myMap)
 
 let iconMarker = L.icon({
     iconUrl: 'marker.png',
